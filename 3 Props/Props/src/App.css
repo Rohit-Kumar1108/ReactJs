@@ -1,0 +1,27 @@
+.contener{
+    border: 1.5px solid black;
+    padding: 10px;
+    height: 100%;
+    width: 40%;
+    margin: auto ;
+    margin-top: 10%;
+    border-radius: 3px;
+}
+.heading{
+    font-weight: 600;
+    margin-left: 3rem;
+    font-size: 2rem;
+}
+.list-btn{
+    float: right;
+
+}
+
+input{
+width: 100%;
+margin-bottom: 10px;
+}
+
+.list-item{
+    font-weight: 600;
+}
