@@ -2,20 +2,22 @@ import { useState } from "react";
 import Item from "./Item";
 import FoodInput from "./FoodInput";
 
-function FoodItem() {
-  const foodItems = ['Daal', 'Green Vegetable', 'Roti', 'Salad', 'Milk', 'Ghee'];
- let  showText = " Food Item Shows";
+function FoodItem() { 
+const [foodItems, setFoodItems] = useState(['Daal', 'Green Vegetable', 'Roti', 'Salad', 'Milk', 'Ghee'])
   const getValue = (event) => {
-    console.log(event.target.value);
-    showText = event.target.value;
+    if(event.key==='Enter'){
+      let val = event.target.value;
+      event.target.value = "";
+     let newVal = [...foodItems,val];
+     setFoodItems(newVal);
+        }
   };
 
   return (
     <>
-      <h3 className="heading">Healthy Food</h3>
+      <h3 className="heading"><span>Healthy Food</span></h3>
       <FoodInput getValue={getValue} />
-      <p>{showText}</p>
-      <ul className="list-group">
+        <ul className="list-group">
         {foodItems.map((item) => (
           <Item key={item} foodItem={item} buyButton={() => alert(item)} />
         ))}

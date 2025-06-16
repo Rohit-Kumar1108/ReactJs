@@ -9,8 +9,8 @@
 }
 .heading{
     font-weight: 600;
-    margin-left: 3rem;
-    font-size: 2rem;
+   font-size: 2rem;
+  text-align: center;
 }
 .list-btn{
     float: right;
