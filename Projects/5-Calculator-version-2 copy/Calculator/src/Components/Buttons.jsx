@@ -23,7 +23,7 @@ function Buttons({OnButtonClick}) {
   return (
     <div className="button-contener">
       {buttonsNames.map((button) => (
-        <button className="btn" onClick={OnButtonClick}>{button}</button>
+        <button className="btn" onClick={()=>OnButtonClick(button)}>{button}</button>
       ))}
     </div>
   );

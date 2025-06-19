@@ -4,11 +4,17 @@ import Buttons from './Components/Buttons'
 import './App.css'
 
 function App() {
-  let OnButtonClick = (e)=>{
-    console.log(e.target.data);
+  let OnButtonClick = (buttonText)=>{
+    if(buttonText==='C'){
+      setVal('');
+    }else if(buttonText==='='){
+      setVal(eval(val))
+    }else{
+      setVal(val+buttonText);
+    }
   }
 
-  const [val, setVal] = useState("1234");
+  const [val, setVal] = useState("");
   return (
    <div className="calculator">
    <Display displayVal = {val}/>    
